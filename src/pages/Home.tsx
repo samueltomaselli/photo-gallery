@@ -15,9 +15,9 @@ export const Home = () => {
   fetchAlbums();
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center min-h-screen">
       {albums.map((item, index) => (
-        <div key={index} className="bg-slate-200 m-4 p-4 flex items-center justify-center w-2/4 border border-slate-600 rounded-xl">
+        <div key={index} className="bg-slate-200 m-4 p-4 flex items-center justify-center w-2/4 border border-slate-600 rounded-xl h-full">
           <Link to={`album/${item.id}`}>
             <div className="flex text-black font-semibold">{item.title}</div>
           </Link>

@@ -18,6 +18,7 @@ export const Item = () => {
       const data = await api.getInfoItem(idItem);
       setItemInfo(data);
     };
+    window.scroll(0, 0);
     fetchInfoItem();
   }, []);
 
@@ -26,12 +27,12 @@ export const Item = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col items-center min-h-screen">
       <button onClick={handleBackButton} className="border p-2 px-8 text-2xl my-5 bg-slate-200 border-gray-900 rounded-md">
         BACK
       </button>
-      <div className="text-2xl mb-5">{itemInfo.title}</div>
-      <img src={itemInfo.url} alt="" className="pb-5" />
+      <div className="text-2xl mb-10">{itemInfo.title}</div>
+      <img src={itemInfo.url} alt="" className="pb-" />
     </div>
   );
 };
